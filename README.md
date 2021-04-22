@@ -1,19 +1,21 @@
 # Project description
 
 - This is an interview project. It uses:
-- **React** - frontend framework
-- **Node.js** - an awesome JS runtime
 - **Typescript** - a superset of javascript, with strict typing
-- **Jest** - testing library for js
+- **Node.js** - an awesome JS runtime
+- **Express** - minimalistic web framework for node.js
+- **React** - frontend framework
 - **Redux** - state management for redux
-
-# Api (Backend)
+- **Jest** - testing library for js
 
 ### Api code is located in api, and the frontend app is in app .
+
+# Api (Backend)
 
 ### Api contains 1 endpoint:
 
 - `/` - root endpoint, serves the data for the frontend app.
+- original data - https://docs.google.com/document/d/1gNCreJxAop1FH3-QJXdMZZzPL8xz4sFVGeNPxj-wsYg/edit
 
 ## Installation
 
@@ -22,6 +24,8 @@ $ npm install # in api/ and app/
 ```
 
 ## Running the api
+
+### Api will be started at port 4000
 
 ```bash
 cd api
@@ -39,6 +43,7 @@ Run them with:
 
 ```bash
 # unit tests
+$ cd app
 $ npm run test
 ```
 
@@ -47,7 +52,9 @@ $ npm run test
 Start the frontend:
 
 ```bash
-cd app
-npm i
-npm start
+$ cd app
+# run tests, optional:
+# $ npm run test
+$ npm i
+$ npm start
 ```
