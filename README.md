@@ -5,6 +5,7 @@
 - **Node.js** - an awesome JS runtime
 - **Express** - minimalistic web framework for node.js
 - **React** - frontend framework
+- **Redux** - state management for react
 - **Jest** - testing library for js
 
 ### Api code is located in api, and the frontend app is in app .
