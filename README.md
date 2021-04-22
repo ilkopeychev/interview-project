@@ -39,6 +39,7 @@ The tests written ensure:
 
 - Sorting algorithm works
 
+They are located in the app/ directory.
 Run them with:
 
 ```bash
