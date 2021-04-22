@@ -1,0 +1,88 @@
+export const MOCKED_SORTED_ORDER_VALUE_ASC = [
+  {
+    orderNumber: "38672",
+    customerName: "Finley, Dakota",
+    customerAddress: "999 South Bend Road",
+    orderValue: 98.99,
+    orderDate: "2021-10-01",
+    shipDate: "2021-13-01",
+    status: "cancelled",
+  },
+  {
+    orderNumber: "02215",
+    customerName: "Doe, John",
+    customerAddress: "123 Main Street",
+    orderValue: 137.11,
+    orderDate: "2021-01-02",
+    shipDate: "2021-03-02",
+    status: "open",
+  },
+  {
+    orderNumber: "12345",
+    customerName: "Smith, Mary",
+    customerAddress: "555 Broadway",
+    orderValue: 157.12,
+    orderDate: "2021-01-03",
+    shipDate: "2021-03-03",
+    status: "shipped",
+  },
+];
+export const MOCKED_SORTED_ORDER_VALUE_DESC = [
+  {
+    orderNumber: "12345",
+    customerName: "Smith, Mary",
+    customerAddress: "555 Broadway",
+    orderValue: 157.12,
+    orderDate: "2021-01-03",
+    shipDate: "2021-03-03",
+    status: "shipped",
+  },
+  {
+    orderNumber: "02215",
+    customerName: "Doe, John",
+    customerAddress: "123 Main Street",
+    orderValue: 137.11,
+    orderDate: "2021-01-02",
+    shipDate: "2021-03-02",
+    status: "open",
+  },
+  {
+    orderNumber: "38672",
+    customerName: "Finley, Dakota",
+    customerAddress: "999 South Bend Road",
+    orderValue: 98.99,
+    orderDate: "2021-10-01",
+    shipDate: "2021-13-01",
+    status: "cancelled",
+  },
+];
+
+export const MOCKED_UNSORTED_ORDER_VALUE_ASC = [
+  {
+    orderNumber: "12345",
+    customerName: "Smith, Mary",
+    customerAddress: "555 Broadway",
+    orderValue: 157.12,
+    orderDate: "2021-01-03",
+    shipDate: "2021-03-03",
+    status: "shipped",
+  },
+  {
+    orderNumber: "38672",
+    customerName: "Finley, Dakota",
+    customerAddress: "999 South Bend Road",
+    orderValue: 98.99,
+    orderDate: "2021-10-01",
+    shipDate: "2021-13-01",
+    status: "cancelled",
+  },
+  {
+    orderNumber: "02215",
+    customerName: "Doe, John",
+    customerAddress: "123 Main Street",
+    orderValue: 137.11,
+    orderDate: "2021-01-02",
+    shipDate: "2021-03-02",
+    status: "open",
+  },
+];
