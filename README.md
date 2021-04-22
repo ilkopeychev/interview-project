@@ -2,6 +2,10 @@
 
 - This is an interview project. It uses:
 - **React** - frontend framework
+- **Node.js** - an awesome JS runtime
+- **Typescript** - a superset of javascript, with strict typing
+- **Jest** - testing library for js
+- **Redux** - state management for redux
 
 # Api (Backend)
 
