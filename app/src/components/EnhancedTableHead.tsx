@@ -2,13 +2,12 @@ import * as React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 import TableCell from '@material-ui/core/TableCell';
-
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Checkbox from '@material-ui/core/Checkbox';
+
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import {Data, headCells} from "./../DataTypes";
-import { ImageOutlined } from '@material-ui/icons';
 import './../Customer.scss';
 
 interface EnhancedTableProps {

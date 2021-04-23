@@ -10,6 +10,12 @@ import EnhancedTableHead from "./components/EnhancedTableHead";
 import EnhancedTableToolbar from "./components/EnhancedTableToolbar";
 // scss
 import './Customer.scss';
+// redux hooks
+import { useAppSelector, useAppDispatch } from './hooks';
+import { customerAction } from './actions';
+
+import * as _ from "lodash";
+
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -41,20 +47,27 @@ export function stableSort<T>(array: T[], comparator: (a: T, b: T) => number) {
 }
 
 
-let persons : Person[]=[];
+
 
 export default function EnhancedTable() {
+  const customersF: Person[] = useAppSelector(state => state.customers.data);
+  const dispatch = useAppDispatch();
   const [rows, setRows] = useState<Person[]>([]);
 
   useEffect( () => {
+    let persons : Person[]=[];
     (async()=>{
       const customersData = await api.getCustomers();
       customersData.data.forEach( (e:PersonDTO) =>{
       persons.push(new Person(e));
         });
-      setRows(persons);
+      dispatch(customerAction(persons));
     })();
   }, []);
+
+  useEffect(() => {
+    setRows(customersF);
+  }, [!_.isEmpty(customersF)])
 
 
   const classes = useStyles();
@@ -115,7 +128,6 @@ export default function EnhancedTable() {
 
   return (
     <div className={classes.root}>
-      {console.log("rows ",rows)}
       <Paper className={classes.paper}>
         <EnhancedTableToolbar numSelected={selected.length} />
         <TableContainer>
@@ -138,7 +150,6 @@ export default function EnhancedTable() {
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
-                  console.log(row);
                   const isItemSelected = isSelected(row.customerName);
                   const labelId = `enhanced-table-checkbox-${index}`;
 
